@@ -1,0 +1,13 @@
+{
+    "manifest_version": 3,
+    "name": "Airflow Webserver Text Csutomizer",
+    "version": "1.0.0",
+    "description": "This extension allows you to customize the text of the Airflow Webserver",
+    "permissions": ["activeTab"],
+    "content_scripts": [
+        {
+            "matches": ["http://localhost:8080/dags/*"],
+            "js": ["content_script.js"]
+        }
+    ]
+}
